@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+  <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE-edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+            <title>W3school Online Web Tutorial </title>
+        </head>
+        <style>
+            body{
+                margin: 0; border: 0;
+                
+                position: absolute; height: 100%; width: 100%;
+            }
+            header{display: flex; box-sizing: border-box;}
+            nav{display: flex; 
+                text-align: center;
+                font-size:18px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular',
+                 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                border:none; box-sizing: border-box;
+                -webkit-text-fill-color: black;
+                justify-content: center;align-items: center;
+                position: relative;
+            }
+            .button:hover{background-color:rgb(59, 224, 128); cursor: pointer;}
+            
+            .button{
+                height: 60px; ; background-color: white;
+                font-size:18px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular',
+                'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                border: none; 
+                box-sizing: border-box;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+            }
+            .left-but{
+                height: 40px;border-radius: 25px; 
+                position: relative; 
+                
+                align-items: right;
+                box-sizing: border-box;
+            }
+            #log-in{
+                display: grid;
+                float: right;
+                position: relative;
+                right: 15px;
+                box-sizing: border-box;
+            }
+            /* #sign-in{
+                position: relative;
+                left: 10px;
+            } */
+            .Menupx{
+                display: none;
+            }
+            
+            .upg-but:hover{background-color: #7d53cc!important;color: #fff!important;cursor: pointer;}
+            .gc-but:hover{background-color: #fd7784!important;color: black!important; cursor: pointer;}
+            .cw-but:hover{background-color: #fff080!important;color: black!important;cursor: pointer;}
+            .Reference-but:hover{background-color: #000!important;color: white!important;cursor: pointer;}
+            .first-button:hover{background-color:  rgb(59, 224, 128)!important; cursor: pointer;}
+            .gc-but{background-color:lightsalmon}
+            .Reference-but{background-color: #282A35; color: white;}
+            .first-button{background-color: #04AA6D; color: white;}
+            .cw-but{background-color:yellow sec-bid-box; color: black;}
+        
+            .landing{
+                background-color: #282A35!important; 
+                display: flex; justify-content: center;
+                align-items: center;
+                box-sizing: border-box; border: 1px solid black;
+            }
+            .landing1{
+                height: 80%; width: 70%; background-color: #282A35;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box; flex-direction: column;
+                display: flex;
+            }
+            .learn{height: auto; width: auto;
+                background-color: #282A35;
+                text-align: center; justify-content:center;
+                align-items: center;
+                box-sizing: border-box; 
+                margin: 10px;
+                }
+            h1{ font-size: 50px;
+                font-weight: 700;
+                margin: 2px 20px;
+            }
+            h2{ font-size: 18px;
+                font-weight: 700; text-align: center;
+                margin: 10px;
+            }
+            u{ font-size: 25px;text-align: center; box-sizing: border-box; margin: 10px;}
+
+            input[type = search]{width: 100%; 
+                height: 100%;
+                box-sizing: border-box; font-size: 18px;
+                border-radius: 10px;
+            }
+            .searchbar{height: 10%; 
+                width: 50%; 
+                border: none;
+            }
+            .HTML-BOX{
+                height: 80%;
+                width: 100%;
+                background-color:#D9EEE1; 
+                color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center; padding:3px;
+                box-sizing: border-box;
+            }
+            .CSS-BOX{
+                height: 70%;
+                width: 100%;
+                background-color:#FFF4A3; 
+                color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center; padding:3px;
+                box-sizing: border-box;
+            }
+            .JS-BOX{
+                height: 70%;
+                width: 100%;
+                background-color:#282A35;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center; padding:3px;
+                box-sizing: border-box;
+            }
+            .PY-BOX{
+                height: 70%;
+                width: 100%;
+                background-color: #F3ECEA;
+                color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center; padding:3px;
+                box-sizing: border-box;
+            }
+            .SQL-BOX{
+                height: 70%;
+                width: 100%;
+                background-color: #96D4D4;
+                color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center; padding:3px;
+                box-sizing: border-box;
+            }
+                        
+                        
+            
+            .main-content{
+                display: flex; 
+                justify-content: center; 
+                align-items:center;
+                flex-direction: column;
+                vertical-align: middle;
+                box-sizing: border-box;
+            }
+            
+            .html-button{
+                height: auto; border: none;
+                box-sizing: border-box;
+                font-size: 18px;
+                margin: 5px;
+                display: block;
+                width: 200px;
+                border-radius: 25px;
+                padding: 8px 16px;
+                overflow: hidden;
+                text-decoration: none;
+                text-align: center;
+            }                                
+            .js-but{
+                height: auto; border: none;
+                box-sizing: border-box;font-size: 18px;
+                font-size: 15px;
+                margin: 5px;
+                display: block;
+                width: 200px;
+                border-radius: 25px;
+                padding: 8px 16px;
+                overflow: hidden;
+                text-decoration: none;
+                text-align: center;
+            }
+            .js-ref{background-color: white; color: black;}
+            .js-main2{color: #000;}
+            .main-content2{
+                background-color: white;
+                border: 2px inset rgb(86, 40, 185);
+                box-sizing: border-box;
+                text-align: left;
+                margin: auto;
+                justify-content: space-evenly;
+                align-items: initial;
+                font-size: larger;
+                padding-left: 20px;
+            }       
+                   
+                
+            .big-main{
+                background-color:#282A35;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 20px;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+            }
+            .PHP-BOX{
+                margin: 20px;
+                box-sizing: border-box;
+                text-align: center;
+                padding: 24px;
+            }
+            .PHP-BOX button{
+                height: 40px;
+                width: 200px;
+                font-size: 18px;
+                box-sizing: border-box;
+                border-radius: 25px;
+                border: none;
+                margin: 20px;                
+            }
+            .sec-big{
+                background-color:#282A35;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                column-gap: 20px;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+            }
+            .sec-bid-box{
+                margin: 20px;
+                box-sizing: border-box;
+                text-align: center;
+                padding: 40px 36px;
+                background-color: #D9EEE1;
+                font-size: 30px;
+                border-radius: 5px;
+    
+            }
+            .white{background-color: #F3ECEA}
+            .green{background-color: #96D4D4;}
+            .pale{background-color: #D9EEE1;}
+            .pink{background-color: #FFC0C7;}
+            .yellow{background-color: #FFF4A3;}
+            .white:hover{cursor: pointer; background-color:#E7E9EB;}
+            .pale:hover{cursor: pointer; background-color:#b3e9c8;}
+            .green:hover{opacity: 0.9;cursor: pointer;}
+            .yellow:hover{opacity: 0.9;cursor: pointer;}
+            .pink:hover{opacity: 0.9;cursor: pointer;}
+            .last{background-color:#282A35;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 20px;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box
+            }
+            @media screen and (width:700px){
+    
+            #Bootcamp{display:none}
+            #Videos{display:none}
+            #CreateWebside{display:none}
+            #Exercise{display:none}
+            #GetCertified{display:none}
+
+            }
+            @media screen and (max-width:800px){
+                
+            #Bootcamp{display:none}
+            #Videos{display:none}
+            #CreateWebside{display:none}
+            #Exercise{display:none}
+            .button:hover{background-color:rgb(59, 224, 128); cursor: pointer;}
+  
+            .big-main{
+                background-color:#282A35;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+                column-gap: 20px;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+            }
+            .sec-big{
+                background-color:#282A35;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 20px;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+            }
+            .last{background-color:#282A35;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr ;
+                column-gap: 20px;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box
+            }
+                
+            }
+            @media screen and (max-width:600px){
+
+            nav{display: none;
+            }
+            .Menupx{display: block;}
+            .Menupx button{width: 116px; 
+            background-color: white;
+            border: none;}
+            .Menupx button:hover{background-color:rgb(59, 224, 128); cursor: pointer;}
+            .button:hover{background-color:rgb(59, 224, 128); cursor: pointer;}
+
+            .main-content2{
+                display:none;
+            }       
+                   
+                
+            .big-main{
+                background-color:#282A35;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+                column-gap: 20px;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+            }
+         
+                
+            }
+            .list{
+              height: 100%;
+              width:20%;
+              background-color: white;
+              display: none;
+              position: fixed;
+              padding: 10px;
+              top: 0;
+              right: 0;
+              font-size: 16px;
+              font-weight: 600;
+            }
+            .total {
+                justify-content: space-between;
+                display:flex;
+                margin-top: 100px;
+            }
+            .total-amount{
+              margin-right:40px;
+            } 
+            .course{
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 10px;
+
+            }
+            .coursename{
+              flex-grow: 1;
+            }
+            .courseprice{
+              margin-right: 40px;
+            }
+           
+        </style>
+        <body>
+            <div class="logo" id="wlogo"
+                style="background-color: blue;
+                height: 60px; width: 60px; 
+                margin:0px; float: left;">
+               <img src="image/channels4_profile.jpg"
+                style = " height: 100%;
+                 width:100%;
+                 display: fixed;">
+           </div>
+
+           <div class="Menupx"style="height:60px;width: 116px;">
+            <button style="height:60px;width:auto;"><b>MENU</b></button>
+            </div>
+            <header>
+            
+                <nav>
+                    <div style="height: 60px; 
+                        width:116px; 
+                        background-color: white;" 
+                        class="nav1" id="Tutorial">
+                        <button 
+                            style = "width: 116px;" 
+                            class= "button tut-but">Tutorial
+                        </button>
+                    
+                    </div>
+                    <div 
+                        style="height: 60px; 
+                        width:132px; 
+                        background-color: white;" 
+                        class="nav1" id="Reference">
+                        <button 
+                            style = "width: 132px;" 
+                            class= "button ref-but">Reference
+                    </button>
+                    </div>
+                    <div 
+                        style="height: 60px; 
+                        width:118px; 
+                        background-color: white;" 
+                        class="nav1" id="Exercise">
+                        <button 
+                            style = "width: 118px;" 
+                            class= "button exe-but">Exercise
+                        </button>
+                    </div>
+                    <div 
+                        style="height: 60px; 
+                        width:118px; 
+                        background-color: white;" 
+                        class="nav1" id="Bootcamp">
+                        <button 
+                            style = "width: 118px;" 
+                            class= "button exe-but">Bootcamp
+                        </button>
+                    </div>
+                    <div 
+                        style="height: 60px; 
+                        width:100px; 
+                        background-color: white;" 
+                        class="nav1" id="Videos">
+                        <button 
+                            style = "width: 100px;" 
+                            class= "button exe-but">Videos
+                        </button>
+                    </div>
+                    <div 
+                        style="height: 40px; 
+                        width:116px; 
+                        background-color: white;" 
+                        class="nav1" id="Upgrade">
+                        <button 
+                            style = "width: 105px;
+                            background-color:#9763f6;
+                            -webkit-text-fill-color: white;" 
+                            class= "button upg-but left-but">Upgrade
+                        </button>
+                    </div>
+                    <div 
+                        style="height: 40px; 
+                        width:140px; 
+                        background-color: white;" 
+                        class="nav1" id="GetCertified">
+                        <button 
+                            style = "width: 132px;" 
+                            class= "button gc-but left-but">Get Certified
+                        </button>
+                    </div>
+                    <div 
+                        style="height: 40px; 
+                        width:160px; 
+                        background-color: white;" 
+                        class="nav1" id="CreateWebside">
+                        <button style = "width: 150px; 
+                            background-color:rgb(249, 228, 45);" 
+                            class= "button cw-but left-but">Create Webside
+                        </button>
+                    </div>
+                    <div 
+                        style="height: 40px; 
+                        width:80px; 
+                        background-color: white; 
+                        border-radius: 25px;" 
+                        class="nav1" id="sign-in">
+                        <button 
+                            style = "width: 105; 
+                            border: 1px solid #9763f6;" 
+                            class= "button sg-but left-but">Sign-in
+                        </button>
+                    </div>
+                    <div 
+                        style="height: 40px; 
+                        width:110px; 
+                        background-color: white; 
+                        border-radius: 25px;" 
+                        class="nav1" 
+                        id="log-in">
+                        <button 
+                            style = "width: 105; 
+                            border: 1px solid #9763f6;" 
+                            class= "button sg-but left-but">Log-in
+                        </button>
+                    </div>
+                </nav>
+            
+            </header>
+            <div 
+                style="height: calc(90% - 70px);" 
+                class="landing">
+                <div 
+                    class="landing1">
+                    <div style = "color: white;"
+                        class="learn"><h1>Learn to Code</h1>
+                    </div>
+                    <div style = "color:#FFC0C7;"
+                        class="learn"><h2><b>With the world's largest web developer site.</b></h2>
+                    </div>
+                    <div 
+                        style = "border-radius: 20px;
+                        background-color: white;"
+                        class="learn searchbar">
+                        <label for="search"></label>
+                        <input 
+                            type="search" 
+                            placeholder="Search our tutorials eg.HTML..." 
+                            style="border:none"
+                        >
+                    </div>
+                    <div 
+                        style = "color: white;"class="learn">
+                        <u><b>Not Sure Where To Begin?</b></u>
+                    </div>                
+                </div>
+            </div>
+            <div 
+                class="HTML-BOX html-content">
+                
+                <div 
+                    style=" height: 90%; 
+                    width: 45%;"
+                    class= "main-content main-box">
+                    <h1 style="font-size:90px;font-weight:700;">HTML</h1>
+                    <p style="font-size:19px;">The language for building web pages</p>
+                  <button class="html-button first-button" onclick="add('Html',1)"><b> HTML</b></button>
+                  <button class="html-button cw-but" onclick="remove('Html')"><b>Remove HTML</b></button>
+                    
+                </div>
+                <div style=" height: 90%; width: 45%;" 
+                    class= "main-content main-content2 main-box"><b><p>
+                        The HyperText Markup Language or <br>
+                        HTML is the standard markup language <br>
+                        for documents designed <br>
+                        to be displayed in a web browser. <br>
+                        It is often assisted by technologies such as 
+                        <br>Cascading Style Sheets 
+                        and scripting <br>
+                        languages such as JavaScript.
+                    </b></p>
+                </div>
+                <div class="list">
+                   <div class="course">
+                      <span class="coursename">Course Name</span>
+                      <span class="courseprice">Fees</span>
+                   </div>
+                <div class="total">Total:<span class='total-amount'>Rs.1</span></div>
+                </div>
+            </div>
+            <div class="CSS-BOX CSS-content">
+                <div 
+                    style=" height: 90%; 
+                    width: 45%;"
+                    class= "main-content css-main">
+                    <h1 style="font-size:90px;font-weight:700;">CSS</h1>
+                    <p style="font-size:19px;"><b>The language for styling web pages</b></p>
+                    <button class="html-button first-button" onclick="add('Css',1)"><b>Add Css</b></button>
+                    <button class="html-button cw-but" onclick="remove('Css')"><b>Remove Css</b></button>
+                </div>
+                <div 
+                    style=" height: 90%; 
+                    width: 45%;" 
+                    class= "main-content main-content2 css-main">
+                    <p><b>body { <br>
+                        background-color: lightblue;<br>
+                      }<br>
+                      <br>
+                      h1 {<br>
+                        color: white;<br>
+                        text-align: center;<br>
+                      }<br>
+                      <br>
+                      p {<br>
+                        font-family: verdana;<br>
+                      }
+                    </b></p>
+                </div>
+            </div>
+            <div 
+                class="JS-BOX JS-content">
+                <div 
+                    style=" height: 90%; 
+                    width: 45%;"
+                    class= "main-content js-main">
+                    <h1 style="font-size:90px;font-weight:700;">JavaScript</h1>
+                    <p style="font-size:19px;"><b>The language for programming web pages</b></p>
+                    <button class="html-button first-button js-but" onclick="add('JavaScript',1)"><b> Add JavaScript</b></button>
+                    <button class="html-button Reference-but js-but js-ref" onclick="remove('JavaScript',1)"><b>Remove JavaScript</b></button>
+                </div>
+                <div 
+                    style=" height: 90%; 
+                    width: 45%;" 
+                    class= "main-content main-content2 js-main js-main2">
+                    <b><p>
+                        JavaScript, often abbreviated as JS,<br>
+                        is a programming language<br> 
+                        that is one of the core technologies<br>
+                        of the World Wide Web, <br>
+                        alongside HTML and CSS. <br>
+                        As of 2022, 98% of websites use JavaScript<br>
+                        on the client side for webpage behavior,<br>
+                        often incorporating third-party libraries<br>
+                    </p></b>
+                </div>
+            </div>
+            <div 
+                class="PY-BOX PY-content">
+                <div 
+                    style=" height: 90%; 
+                    width: 45%;"
+                    class= "main-content py-main">
+                    <h1 style="font-size:90px;font-weight:700;">Python</h1>
+                    <p style="font-size:19px;"><b>A popular programming language</b></p>
+                    <button class="html-button first-button" onclick="add('Python',1)"><b>Add Python</b></button>
+                    <button class="html-button Reference-but py-but" onclick="remove('Python',1)"><b>Remove Python</b></button>
+                </div>
+                <div 
+                    style=" height: 90%; width: 45%;" 
+                    class= "main-content main-content2 py-main">
+                    <b><p>
+                        Python is a high-level, <br>
+                        general-purpose programming language.<br> 
+                        Its design philosophy emphasizes <br>
+                        code readability with the use of significant<br>
+                        indentation via the off-side rule.<br>
+                        Python is dynamically typed <br>
+                        and garbage-collected.
+                    </p></b>
+                </div>
+            </div>
+            <div 
+                class="SQL-BOX SQL-content">
+                <div 
+                    style=" height: 90%; width: 45%;"
+                    class= "main-content sql-main"><h1 style="font-size:90px;font-weight:700;">SQL</h1>
+                    <p style="font-size:19px;"><b>A language for accessing databases</b></p>
+                    <button class="html-button first-button" onclick="add('Sql',1)"><b>Add SQL</b></button>
+                    <button class="html-button Reference-but sql-but" onclick="remove('Sql',1)"><b>Remove SQL</b></button>
+                </div>
+                <div 
+                    style=" height: 90%; width: 45%;" 
+                    class= "main-content main-content2 sql-main">
+                    <b><p>
+                        Structured Query Language, is a<br>
+                        domain-specific language<br>
+                        used in programming and designed<br>
+                        for managing data held in a <br>
+                        relational database management system, <br>
+                        or for stream processing in a <br>
+                        relational data stream management system.
+                    </p></b>
+                </div>
+            </div>
+            <div 
+                class="big-main">
+                <div 
+                    style=" background-color:#FFC0C7;"
+                    class="PHP-BOX">
+                    <h1><b>PHP</b></h1>
+                    <p><b>A web server programming language</b></p>
+                    <button 
+                        class="Reference-but" onclick="add('PHP',1)">
+                        <b>Add PHP</b>
+                    </button>
+                    <button 
+                        class="Reference-but" onclick="remove('PHP',1)">
+                        <b>Remove PHP</b>
+                    </button>
+                </div>
+                <div 
+                    style=" background-color:#FFF4A3"
+                    class="PHP-BOX">
+                    <h1><b>JQuerry</b></h1>
+                    <p><b>A JS library for developing web pages</b></p>
+                    <button 
+                        class="Reference-but" onclick="add('JQuerry',1)">
+                        <b>Add JQuerry</b>
+                    </button>
+                    <button 
+                        class="Reference-but" onclick="remove('Jquerry',1)">
+                        <b>Remove JQuerry</b>
+                    </button>
+                </div>
+                
+                <div 
+                    style=" background-color:#F3ECEA"
+                    class="PHP-BOX ">
+                    <h1><b>Java</b></h1>
+                    <p><b>A programming language</b></p>
+                    <button class="Reference-but" onclick="add('Java',1)">
+                      <b>Add Java</b>
+                    </button>
+                    <button class="Reference-but" onclick="remove('Java',1)">
+                      <b>Remove Java</b>
+                  </button>
+                </div>
+                <div 
+                    style=" background-color:#D9EEE1;"
+                    class="PHP-BOX ">
+                    <h1><b>C++</b></h1>
+                    <p><b>A programming language</b></p>
+                    <button 
+                        class="Reference-but" onclick="add('C++',1)">
+                        <b>Add C++</b>
+                    </button>
+                    <button 
+                        class="Reference-but" onclick="remove('C++',1)">
+                        <b>Remove C++</b>
+                    </button>
+                </div>
+                 <div 
+                    style=" background-color:#96D4D4;"
+                    class="PHP-BOX">
+                    <h1><b>W3.CSS</b></h1>
+                    <p><b>A CSS framework for faster and better responsive web pages</b></p>
+                    <button 
+                        class="Reference-but" onclick="add('W3.CSS',1)">
+                        <b>Add W3.CSS</b>
+                    </button>
+                    <button 
+                        class="Reference-but" onclick="remove('W3.CSS',1)">
+                        <b>Remove W3.CSS</b>
+                    </button>
+                </div>
+                <div 
+                    style=" background-color:#E7E9EB;"
+                    class="PHP-BOX"><h1>
+                    <b>Bootstrap</b></h1>
+                    <p><b>A CSS framework for designing better web pages</b></p>
+                    <button 
+                        class="Reference-but" onclick="add('Bootstrap',1)">
+                        <b>Add Bootstrap</b>
+                    </button>
+                    <button 
+                        class="Reference-but" onclick="remove('Bootstrap',1)">
+                        <b>Remove Bootstrap</b>
+                    </button>
+                </div>
+                <div 
+                    style=" background-color:#FFC0C7;
+                    padding:36px 24px;"
+                    class="PHP-BOX">
+                    <h1><b>C</b></h1>
+                </div>
+                <div 
+                    style=" background-color:#FFF4A3; 
+                    padding:36px 24px;"
+                    class="PHP-BOX">
+                    <h1><b>C#</b></h1>
+                </div>              
+            </div>
+            <div class="sec-big">
+                <div class="white sec-bid-box"><b>R</b></div>
+                <div class="pale sec-bid-box"><b>Kotlin</b></div>
+                <div class="green sec-bid-box"><b>Node.js</b></div>
+                <div class="pink sec-bid-box"><b>React</b></div>
+                <div class="yellow sec-bid-box"><b>JSON</b></div>
+                <div class="white sec-bid-box"><b>Vue</b></div>
+                <div class="pale sec-bid-box"><b>MuSQL</b></div>
+                <div class="green sec-bid-box"><b>XML</b></div>
+                <div class="pink sec-bid-box"><b>Sass</b></div>
+                <div class="yellow sec-bid-box"><b>Icons</b></div>
+                <div class="white sec-bid-box"><b>RWD</b></div>
+                <div class="pale sec-bid-box"><b>Graphics</b></div>
+                <div class="green sec-bid-box"><b>SVG</b></div>
+                <div class="pink sec-bid-box"><b>Raspberry Pi</b></div>
+                <div class="yellow sec-bid-box"><b>Canvas</b></div>
+                <div class="white sec-bid-box"><b>Cyber Security</b></div>
+                <div class="pale sec-bid-box"><b>Clors</b></div>
+                <div class="green sec-bid-box"><b>Git</b></div>
+                <div class="pink sec-bid-box"><b>Matplotlib</b></div>
+                <div class="yellow sec-bid-box"><b>NumPy</b></div>
+                <div class="white sec-bid-box"><b>Pandas</b></div>
+                <div class="pale sec-bid-box"><b>SciPy</b></div>
+                <div class="green sec-bid-box"><b>ASP</b></div>
+                <div class="pink sec-bid-box"><b>AngularJS</b></div>
+                <div class="yellow sec-bid-box"><b>AppMl</b></div>
+                <div class="white sec-bid-box"><b>Go</b></div>
+                <div class="pale sec-bid-box"><b>TypeScript</b></div>
+                <div class="green sec-bid-box"><b>Django</b></div>
+                <div class="pink sec-bid-box"><b>MangoDB</b></div>
+                <div class="yellow sec-bid-box"><b>Statistics</b></div>
+                <div class="white sec-bid-box"><b>Data Science</b></div>
+                <div class="pale sec-bid-box"><b>Typing Speed</b></div>
+            </div>
+            <div class="last">
+                <div class="green sec-bid-box"><b>Excel</b></div>
+                <div class="pink sec-bid-box"><b>Google Sheets</b></div>
+                <div class="yellow sec-bid-box"><b>Machine Learning</b></div>
+                <div class="white sec-bid-box"><b>Artificial Intelligence</b></div>
+            </div>
+        </body>
+        <script>
+            var listDiv = document.querySelector('.list');
+            var course = document.querySelector('.course');
+            var totalEle = document.querySelector('.total');
+            var total =0;
+        
+           function add(courseName,price){
+            var existingCourses = document.querySelectorAll('.coursename');
+            var isDuplicate = Array.from(existingCourses).some(function(course) {
+                return course.textContent === courseName;
+            });
+
+            if (isDuplicate) {
+                return;
+            }
+            var newCourse = document.createElement('div');
+            newCourse.classList.add('course');
+            newCourse.innerHTML = "<span class='coursename'>" + courseName + "</span><span class='courseprice'>Rs" + price +"</span>";
+            listDiv.insertBefore(newCourse,totalEle);
+            total +=price;
+            updateTotal();
+            listDiv.style.display = 'block';
+            
+
+           }
+           function remove(coursename) {
+    var courses = document.querySelectorAll('.coursename');
+    var courseToRemove;
+    for (var i = 0; i < courses.length; i++) {
+      if (courses[i].textContent === coursename) {
+        courseToRemove = courses[i];
+        break;
+      }
+    }
+
+    if (courseToRemove) {
+      var removedCourse = courseToRemove.parentElement;
+      var priceString = removedCourse.querySelector('.courseprice').textContent;
+      var price = parseInt(priceString.replace(/[^0-9]/g, ''));
+      total -= price;
+      updateTotal();
+      removedCourse.parentElement.removeChild(removedCourse);
+      if (listDiv.childElementCount === 1) {
+        listDiv.style.display = 'none';
+      }
+    }
+  }
+
+  function updateTotal() {
+    totalEle.textContent = 'Total:        Rs.' + total;
+    if(total === 0){
+      listDiv.style.display = 'none';
+    } else{
+      listDiv.style.display ='block'
+    }
+  }
+        </script>
+    </html>
+
+    
+    
